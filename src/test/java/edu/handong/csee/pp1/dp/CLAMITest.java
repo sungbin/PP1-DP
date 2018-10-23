@@ -72,13 +72,21 @@ public class CLAMITest {
 	@Test
 	public void testCLAMIWithApacheProjectToFindBestCutoffForPrecision() {
 		
-		// TASK5 TODO Use this method to find the best cutoff
+		// TASK5 Use this method to find the best cutoff
 		
-		String bestCutoff = "50";
+		String bestCutoff = "97";
 		
 		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
-
+		
 		CLAMI.main(args);
+//		for(int i = 70; i<100;i++) {
+//			
+//			String bestCutoff = String.valueOf(i);
+//			
+//			String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+//			System.out.println("@@@@@@@@@@@@"+i+"@@@@@@@@@@@@");
+//			CLAMI.main(args);
+//		}
 	}
 	
 	@Test
@@ -86,11 +94,21 @@ public class CLAMITest {
 		
 		// TASK6 TODO Use this method to find the best cutoff for f-measure
 		
-		String bestCutoff = "50";
+//		String bestCutoff = "50";
+//		
+//		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+//
+//		CLAMI.main(args);
 		
-		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
-
-		CLAMI.main(args);
+		for(int i = 70; i<100;i++) {
+			
+			String bestCutoff = String.valueOf(i);
+			
+			String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+			System.out.println("@@@@@@@@@@@@"+i+"@@@@@@@@@@@@");
+			CLAMI.main(args);
+		}
+		
 	}
 
 }
