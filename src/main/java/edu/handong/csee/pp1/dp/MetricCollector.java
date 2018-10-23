@@ -98,18 +98,22 @@ public class MetricCollector {
 	}
 	
 	private int computeNumOfMethodInvocations(JavaASTParser codeAST) {
-		// TASK1 TODO codeAST에서 매소드 호출된 개수를 가져온다.
-		return 0;
+		// TASK1 codeAST에서 매소드 호출된 개수를 가져온다.
+		
+		
+		return codeAST.getMethodInvocations().size();
 	}
 	
 	private int computeNumOfForLoops(JavaASTParser codeAST) {
-		// TASK1 TODO codeAST에서 for loop의 개수를 가져온다.
-		return 0;
+		// TASK2 codeAST에서 for loop의 개수를 가져온다.
+		
+		return codeAST.getForStatements().size();
 	}
 	
 	private int computeNumOfIfStatements(JavaASTParser codeAST) {
-		// TASK1 TODO codeAST에서 if문의 개수를 가져온다.
-		return 0;
+		// TASK3 codeAST에서 if문의 개수를 가져온다.
+		
+		return codeAST.getIfStatements().size();
 	}
 	
 	public void saveAnArffFile() {
