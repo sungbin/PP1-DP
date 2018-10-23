@@ -94,20 +94,22 @@ public class CLAMITest {
 		
 		// TASK6 TODO Use this method to find the best cutoff for f-measure
 		
-//		String bestCutoff = "50";
-//		
-//		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
-//
-//		CLAMI.main(args);
+		//42, 0.7523809523809524
 		
-		for(int i = 70; i<100;i++) {
-			
-			String bestCutoff = String.valueOf(i);
-			
-			String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
-			System.out.println("@@@@@@@@@@@@"+i+"@@@@@@@@@@@@");
-			CLAMI.main(args);
-		}
+		String bestCutoff = "42";
+		
+		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+
+		CLAMI.main(args);
+		
+//		for(int i = 50; i<100;i++) {
+//			
+//			String bestCutoff = String.valueOf(i);
+//			
+//			String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+//			System.out.println("@@@@@@@@@@@@ "+i+" @@@@@@@@@@@@");
+//			CLAMI.main(args);
+//		}
 		
 	}
 
